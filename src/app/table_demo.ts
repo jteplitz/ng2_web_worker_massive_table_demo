@@ -1,4 +1,4 @@
-import {Component, NgFor} from "angular2/angular2";
+import {Component, NgFor} from "angular2/web_worker/worker";
 
 var NUM_ITEMS_PER_ROUND: number = 30;
 const MAX_ITEMS = 100000;

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc -p src -w",
-    "start": "live-server --open=src"
+    "start": "live-server --open=src",
+    "postinstall": "./scripts/build_angular.sh"
   },
   "keywords": [],
   "author": "Jason Teplitz",
