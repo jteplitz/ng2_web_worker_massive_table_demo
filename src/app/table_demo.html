@@ -1,0 +1,14 @@
+<table class="sticky-header">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Largest Prime Factor</th>
+    </tr>
+  </thead>
+  <tbody (scroll)="generateData()">
+    <tr *ng-for="#item of items">
+      <td>{{item.num}}</td>
+      <td>{{item.factor}}</td>
+    </tr>
+  </tbody>
+</table>
