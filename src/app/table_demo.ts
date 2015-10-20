@@ -1,5 +1,4 @@
-import {Component} from "angular2/src/core/metadata";
-import {NgFor} from 'angular2/src/core/directives';
+import {Component, NgFor} from "angular2/angular2";
 
 var NUM_ITEMS_PER_ROUND: number = 30;
 const MAX_ITEMS = 100000;

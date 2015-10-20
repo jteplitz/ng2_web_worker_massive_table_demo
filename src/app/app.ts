@@ -1,5 +1,6 @@
-import {bootstrap} from "angular2/web_worker/ui";
+import {bootstrap} from "angular2/angular2";
+import {TableDemo} from "./table_demo";
 
 export function main() {
-  bootstrap("loader.js");
+  bootstrap(TableDemo);
 }
