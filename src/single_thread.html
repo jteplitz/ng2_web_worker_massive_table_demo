@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="../node_modules/floatthead/dist/jquery.floatThead.min.js"></script>
+    <script>
+      System.config({
+        packages: {'app': {defaultExtension: 'js'}}
+      });
+      System.import("app/single_thread").then(function(m) {
+        m.main();
+      });
+    </script>
+  </head>
+  <body>
+    <table-demo>
+      Loading...
+    </table-demo>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        setTimeout(function() {
+          var jquery = $.noConflict(true);
+          var jquery = $.noConflict(true);
+          jquery(".sticky-header").floatThead();
+        }, 1000);
+        
+        // currently there's no way to listen to scroll events on the window from within our view
+        // so we grab the event here and repropagate it on the tbody
+        window.addEventListener("scroll", function(e) {
+          var event = new UIEvent("scroll");
+          document.querySelector("table-demo tbody").dispatchEvent(event);
+        });
+      });
+    </script>
+  </body>
+</html>
