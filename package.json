@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc -p src -w",
-    "start": "live-server --open=src"
+    "live-server": "live-server --open=src",
+    "start": "tsc | live-server"
   },
   "keywords": [],
   "author": "Jason Teplitz",
